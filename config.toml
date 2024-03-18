@@ -1,4 +1,4 @@
 [config]
-server = "https://192.168.9.240:5002/msr"
-count_of_attempts = 10
-time_to_wait = 1
+server = '111.111.111.111'
+count_of_attempts = 20
+time_to_wait = 120

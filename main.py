@@ -2,6 +2,7 @@ import requests
 import time
 import toml
 import csv
+import os
 from getpass import getpass
 from requests.auth import HTTPBasicAuth
 from tinydb import TinyDB, Query
@@ -12,11 +13,17 @@ Todo = Query()
 
 
 def create_config():
-    with open("config.toml", "w") as f:
-        f.write("[config]\n")
-        f.write(f"server = " + "'" + input("Server adress: ") + "'" + "\n")
-        f.write(f"count_of_attempts = " + input("Count of attempts: ") + "\n")
-        f.write(f"time_to_wait = " + input("Time to wait between record: ") + "\n")
+    if os.path.isfile("./config.toml"):
+        print("Config exists")
+    else:
+        print("Config doesn't exist. Please continue with steps below to create one")
+        with open("config.toml", "w") as f:
+            f.write("[config]\n")
+            f.write(f"server = " + "'" + input("Server adress: ") + "'" + "\n")
+            f.write(f"count_of_attempts = " + input("Count of attempts: ") + "\n")
+            f.write(f"time_to_wait = " + input("Time to wait between record: ") + "\n")
+
+
 
 
 def load_config(config_name="config.toml"):
@@ -70,6 +77,6 @@ def to_csv():
 
 
 if __name__ == "__main__":
-    # create_config()
-    main()
+    create_config()
+    # main()
     to_csv()
