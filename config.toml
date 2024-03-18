@@ -1,6 +1,4 @@
 [config]
-server = "https://192.168.9.236:5002/msr"
-password = "greenfish2"
-username = "student"
+server = "https://192.168.9.240:5002/msr"
 count_of_attempts = 10
 time_to_wait = 1
