@@ -1,4 +1,16 @@
-<H1>School project<\H1>
+# Get MSR, school exercise
 
-Connects to local school API
-Saves CO2 values into no sql database, afterward gets values that are above 1500 and writes them into csv file.
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+## Description
+
+This program connects to local server of school. Gets data about CO2 concentration in class and outputsa them into no sql database.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+- GitHub: [1llyaa](https://github.com/1llyaa)
+- Email: illyamiloserdov@skaut.cz
